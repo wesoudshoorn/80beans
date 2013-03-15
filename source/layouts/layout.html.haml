@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %script{:src => "//use.typekit.net/skg3zsg.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "/stylesheets/main.css", :rel => "stylesheet"}
+  %body
+    .main-header
+      %header.clearfix
+        %h1.logo Wes Oudshoorn
+        %nav
+          %ul
+            %li
+              %a{:href => "/"} blog
+            %li
+              %a{:href => "/friends"} friend
+            %li
+              %a{:href => "/about"} about
+    .main-container
+      = yield
+    %script{:src => "js/main.js"}
