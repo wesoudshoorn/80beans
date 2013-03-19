@@ -123,18 +123,4 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
-
-  if ENV.include?('DEPLOY')
-    activate :s3_deploy do |s3|
-      s3.access_key_id = 'AKIAIK2BQXJWVSXJQL5A'
-      s3.secret_access_key = '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'
-      s3.bucket = 'blog.appsignal.com'
-      s3.region = 'eu-west-1'
-    end
-    activate :invalidate_cloudfront do |cf|
-      cf.access_key_id = 'AKIAIK2BQXJWVSXJQL5A'
-      cf.secret_access_key = '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'
-      cf.distribution_id = 'E2VY2OG5ZGVIO0'
-    end
-  end
 end

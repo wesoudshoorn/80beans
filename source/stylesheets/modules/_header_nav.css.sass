@@ -1,0 +1,36 @@
+.mod-header_nav
+  float: right
+  padding-top: 20px
+
+  ul
+    margin: 0
+    padding: 0
+  li
+    float: left
+    height: 30px
+    line-height: 30px
+    padding: 0 20px
+    +nobullet
+
+    a
+      color: $secondary
+      display: block
+      text-decoration: none
+
+    &.active
+      background-size: 20%
+      a
+        color: $primary
+
+    &:hover
+      a
+        color: $primary
+
+  @media (max-width: 840px)
+    li
+      padding: 0 10px
+
+  @media (max-width: 540px)
+
+    li
+      padding: 0 5px

@@ -1,27 +1,28 @@
 !!!
 %html
   %head
-    %script{:src => "//use.typekit.net/skg3zsg.js", :type => "text/javascript"}
-    :javascript
-      try{Typekit.load();}catch(e){}
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %title
     %meta{:content => "", :name => "description"}
     %meta{:content => "width=device-width", :name => "viewport"}
-    %link{:href => "/stylesheets/main.css", :rel => "stylesheet"}
+    %link{:href => "/stylesheets/application.css", :rel => "stylesheet"}
   %body
-    .main-header
-      %header.clearfix
-        %h1.logo Wes Oudshoorn
+    .container
+      %header
+        %h1.logo 80beans
         %nav
           %ul
             %li
-              %a{:href => "/"} blog
+              %a{:href => "/"} Home
             %li
-              %a{:href => "/friends"} friend
+              %a{:href => "/development/"} Development
             %li
-              %a{:href => "/about"} about
-    .main-container
-      = yield
+              %a{:href => "/front-end/"} Front-End
+            %li
+              %a{:href => "/about-us/"} About Us
+            %li
+              %a{:href => "/contact/"} Contact
+      %section.content
+        = yield
     %script{:src => "js/main.js"}

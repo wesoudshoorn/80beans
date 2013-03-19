@@ -1,0 +1,33 @@
+.mod-header
+  position: relative
+  z-index: 2
+  text-align: left
+  margin-bottom: 30px
+  padding-top: 20px
+  border-bottom: 1px solid $tertiary
+  background: white
+  //+single-box-shadow(#bdbdbd, 0, 0, 4px)
+
+  h1
+    @include adjust-font-size-to(42px)
+    margin: 0 0 rhythm(1, 42px) 0             // 2 lines below, based on font size
+    float: left
+    padding: 0 25px
+    margin: 0
+
+    a
+      padding-left: 58px
+      text-decoration: none
+      color: $secondary
+      +data-uri-bg("source/logo@2x.png", left top no-repeat)
+      background-size: auto 42px
+
+      &:hover
+        color: $primary
+        +data-uri-bg("source/logo@2x_hover.png", left top no-repeat)
+        background-size: auto 42px
+
+    @media (max-width: 540px)
+      padding: 0
+      span
+        display: none

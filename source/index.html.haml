@@ -1,21 +1,33 @@
 ---
-title: "Home"
+title: Welcome to our lovely website
 ---
+%section.intro
+  %h1.large
+    We’re the guys that make something happen when you press a
+    %button blabla
 
-- if page_articles.empty?
+%section.blocks
+
   %article
-    %header
-      %h1.article Huh? What blog?
-      %p I'm hard at work writing content, so check back later!
-- else
-  - page_articles.each do |article|
-    %article{:class => article.data.text}
-      %header{:style => "background: #{article.data.bg}"}
-        %h1= link_to article.title, article 
-        %p
-          = article.data.when
-      %section
-        -if article.data.intro.present?
-          %p.intro= article.data.intro
-        =article.body
-        %p.meta= link_to article.title, article 
+    %h1 Development
+    %p
+      We have a team of skilled developers to work on client focussed applications. We’ve been taking the agile aproach for a couple of years to deliver better and faster applications.
+      %a{:href => "#"} Try us.
+
+  %article
+    %h1 Code audits
+    %p
+      Our senior developers can audit code written by other developers. We’ve done this for multiple projects, with interesting outcomes. We mainly audit Ruby code, but other languages are possible.
+      %a{:href => "#"} Try us.
+
+  %article
+    %h1 Front-end
+    %p
+      We have a team of skilled developers to work on client focussed applications. We’ve been taking the agile aproach for a couple of years to deliver better and faster applications.
+      %a{:href => "#"} Try us.
+
+  %article
+    %h1 Development
+    %p
+      We have a team of skilled developers to work on client focussed applications. We’ve been taking the agile aproach for a couple of years to deliver better and faster applications.
+      %a{:href => "#"} Try us.

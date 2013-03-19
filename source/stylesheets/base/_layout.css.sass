@@ -1,0 +1,34 @@
+*
+  +box-sizing(border-box)
+
+html
+  overflow-y: scroll
+  font-size: 100%
+
+body
+  min-width: 320px
+  background: #fff
+  color: #666666
+  font-family: Helvetica, Arial, sans-serif
+
+.layout-wrap
+  max-width: 1000px
+  margin: 0 auto
+  padding: 0 20px
+  @extend %clearfix
+
+.layout-main
+  padding: 0 180px
+  background: #fff
+
+  +max-width(940px)
+    padding-right: 130px
+    padding-left: 130px
+
+  +max-width(840px)
+    padding-right: 80px
+    padding-left: 80px
+
+  +max-width(700px)
+    padding-right: 20px
+    padding-left: 20px

@@ -1,0 +1,21 @@
+---
+title: "Home"
+---
+
+- if page_articles.empty?
+  %article
+    %header
+      %h1.article Huh? What blog?
+      %p I'm hard at work writing content, so check back later!
+- else
+  - page_articles.each do |article|
+    %article{:class => article.data.text}
+      %header{:style => "background: #{article.data.bg}"}
+        %h1= link_to article.title, article 
+        %p
+          = article.data.when
+      %section
+        -if article.data.intro.present?
+          %p.intro= article.data.intro
+        =article.body
+        %p.meta= link_to article.title, article 
